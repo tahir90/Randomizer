@@ -7,6 +7,8 @@ import com.randomizer.android.BuildConfig;
 import com.randomizer.android.app.injection.AppComponent;
 import com.randomizer.android.app.injection.AppModule;
 import com.randomizer.android.app.injection.DaggerAppComponent;
+import com.randomizer.android.app.injection.NetworkApiModule;
+import com.randomizer.android.constants.AppConstants;
 
 import timber.log.Timber;
 
@@ -24,6 +26,7 @@ public final class RandomizerApp extends Application {
 
         mAppComponent = DaggerAppComponent.builder()
                 .appModule(new AppModule(this))
+                .networkApiModule(new NetworkApiModule(AppConstants.RANDOM_USER_API_URL))
                 .build();
     }
 
