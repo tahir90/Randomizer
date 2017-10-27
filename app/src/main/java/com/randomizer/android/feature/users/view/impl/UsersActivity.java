@@ -107,7 +107,7 @@ public final class UsersActivity extends BaseActivity<UsersPresenter, UsersView>
 
         private void loadNextPage() {
             assert mPresenter != null;
-            mPresenter.fetchCarousalPage(getNextPageNumber());
+            mPresenter.fetchNextPage(getNextPageNumber());
         }
 
         private int getNextPageNumber() {

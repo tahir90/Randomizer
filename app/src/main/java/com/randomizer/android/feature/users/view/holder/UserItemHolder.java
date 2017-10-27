@@ -42,11 +42,11 @@ public class UserItemHolder extends RecyclerView.ViewHolder implements View.OnCl
         itemView.setOnClickListener(this);
     }
 
-    public void bindData(RandomUser randomUser) {
+    public void bindData(RandomUser randomUser , int position) {
         mRandomUser = randomUser;
 
         mNameTextView.setText(AppUtils.getFormatedName(mRandomUser));
-        mGenderTextView.setText(AppUtils.getFormatedGender(mRandomUser));
+        mGenderTextView.setText(position+": " + AppUtils.getFormatedGender(mRandomUser));
         mEmailTextView.setText(mRandomUser.getEmail());
 
 

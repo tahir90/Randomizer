@@ -36,7 +36,7 @@ public final class UsersPresenterImpl extends BasePresenterImpl<UsersView> imple
     }
 
     private void laodFirstPage() {
-        fetchCarousalPage(AppConstants.FIRST_PAGE_NUMBER);
+        fetchNextPage(AppConstants.FIRST_PAGE_NUMBER);
     }
 
 
@@ -54,7 +54,7 @@ public final class UsersPresenterImpl extends BasePresenterImpl<UsersView> imple
     }
 
     @Override
-    public void fetchCarousalPage(int pageNumber) {
+    public void fetchNextPage(int pageNumber) {
         if (!mInteractor.isNetworkConnected()) {
             assert mView != null;
             mView.showNetworkError();
@@ -82,6 +82,7 @@ public final class UsersPresenterImpl extends BasePresenterImpl<UsersView> imple
     public void onFailure(String message) {
         mIsLoading = false;
         assert mView != null;
+        mView.showErrorWithMessage(message);
         mView.hideLoading();
     }
 
@@ -97,6 +98,7 @@ public final class UsersPresenterImpl extends BasePresenterImpl<UsersView> imple
 
     @Override
     public void onDataResponse(List<RandomUser> list) {
+        assert mView != null;
         mView.loadList(list);
     }
 }

@@ -8,5 +8,5 @@ public interface UsersPresenter extends BasePresenter<UsersView>, UsersInteracto
 
     boolean isLoading();
 
-    void fetchCarousalPage(int nextPageNumber);
+    void fetchNextPage(int nextPageNumber);
 }
