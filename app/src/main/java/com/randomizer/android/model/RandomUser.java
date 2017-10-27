@@ -6,16 +6,20 @@ public class RandomUser {
     private String title;
     private String firstName;
     private String lastName;
+    private String phone;
     private String gender;
     private String imageUrl;
+    private String address;
 
-    public RandomUser(String email, String title, String firstName, String lastName, String gender, String imageUrl) {
+    public RandomUser(String email, String title, String firstName, String lastName, String phone, String gender, String imageUrl, String address) {
         this.email = email;
         this.title = title;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.phone = phone;
         this.gender = gender;
         this.imageUrl = imageUrl;
+        this.address = address;
     }
 
     public String getEmail() {
@@ -50,6 +54,14 @@ public class RandomUser {
         this.lastName = lastName;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     public String getGender() {
         return gender;
     }
@@ -66,6 +78,14 @@ public class RandomUser {
         this.imageUrl = imageUrl;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     @Override
     public String toString() {
         return "RandomUser{" +
@@ -73,8 +93,10 @@ public class RandomUser {
                 ", title='" + title + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", phone='" + phone + '\'' +
                 ", gender='" + gender + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
+                ", address='" + address + '\'' +
                 '}';
     }
 }

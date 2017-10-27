@@ -3,10 +3,10 @@
 
     <stroke
         android:width="@dimen/stroke_width"
-        android:color="@color/colorAccent"/>
+        android:color="@color/colorPrimary"/>
 
     <corners android:radius="@dimen/card_corner_radius"/>
 
-    <solid android:color="@color/colorAccentDim"/>
+    <solid android:color="@color/colorPrimaryDim"/>
 
 </shape>

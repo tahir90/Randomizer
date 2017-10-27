@@ -29,8 +29,10 @@ public class RandomUsersParser {
                             result.getName().getTitle(),
                             result.getName().getFirst(),
                             result.getName().getLast(),
+                            result.getPhone(),
                             result.getGender(),
-                            result.getPicture().getLarge()
+                            result.getPicture().getLarge(),
+                            AppUtils.getFormatedAddress(result.getLocation())
                     );
                     list.add(ru);
                 }

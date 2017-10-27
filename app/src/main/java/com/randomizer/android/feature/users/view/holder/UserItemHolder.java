@@ -29,6 +29,10 @@ public class UserItemHolder extends RecyclerView.ViewHolder implements View.OnCl
     protected TextView mGenderTextView;
     @BindView(R.id.textview_email)
     protected TextView mEmailTextView;
+    @BindView(R.id.textview_phone)
+    protected TextView mPhoneTextView;
+    @BindView(R.id.textview_address)
+    protected TextView mAddressTextView;
 
 
     private final Context mContext;
@@ -42,23 +46,25 @@ public class UserItemHolder extends RecyclerView.ViewHolder implements View.OnCl
         itemView.setOnClickListener(this);
     }
 
-    public void bindData(RandomUser randomUser , int position) {
+    public void bindData(RandomUser randomUser) {
         mRandomUser = randomUser;
-
-        mNameTextView.setText(AppUtils.getFormatedName(mRandomUser));
-        mGenderTextView.setText(position+": " + AppUtils.getFormatedGender(mRandomUser));
-        mEmailTextView.setText(mRandomUser.getEmail());
-
 
         setValues();
     }
 
     private void setValues() {
+
+        mNameTextView.setText(AppUtils.getFormatedName(mRandomUser));
+        mGenderTextView.setText(AppUtils.getFormatedGender(mRandomUser));
+        mEmailTextView.setText(mRandomUser.getEmail());
+        mPhoneTextView.setText(mRandomUser.getPhone());
+        mAddressTextView.setText(mRandomUser.getAddress());
+
         ImageUtils.loadImage(mContext, mLogoImageView, imageProgressBar,  mRandomUser.getImageUrl());
     }
 
     @Override
     public void onClick(View view) {
-        ((UsersActivity)view.getContext()).showErrorWithMessage("Clicked:" + mRandomUser);
+        ((UsersActivity)view.getContext()).showToast("Clicked:" + AppUtils.getFormatedName(mRandomUser));
     }
 }

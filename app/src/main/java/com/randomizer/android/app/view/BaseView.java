@@ -11,5 +11,7 @@ public interface BaseView {
 
     void showErrorLoading();
 
+    void showToast(String message);
+
     void showNetworkError();
 }

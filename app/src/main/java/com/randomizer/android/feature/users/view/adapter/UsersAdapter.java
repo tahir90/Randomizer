@@ -27,7 +27,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UserItemHolder> {
 
     @Override
     public void onBindViewHolder(UserItemHolder holder, int position) {
-        holder.bindData(mList.get(position), position);
+        holder.bindData(mList.get(position));
     }
 
     @Override
