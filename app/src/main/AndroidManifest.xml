@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.randomizer.android">
 
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
         android:name=".app.RandomizerApp"
         android:allowBackup="true"
@@ -19,8 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".view.impl.UsersActivity">
-        </activity>
+
+        <activity android:name=".feature.users.view.impl.UsersActivity"/>
+
     </application>
 
 </manifest>

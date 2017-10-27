@@ -6,4 +6,14 @@
     <dimen name="margin_padding_average">10dp</dimen>
     <dimen name="margin_padding_maximum">15dp</dimen>
     <dimen name="margin_padding_maxmax">30dp</dimen>
+    <dimen name="stroke_width">2dp</dimen>
+    <dimen name="card_corner_radius">3dp</dimen>
+
+    <dimen name="width_height_dp">144dp</dimen>
+
+    <!--Text Sizes-->
+    <dimen name="textSize">15sp</dimen>
+    <dimen name="titleTextSize">16sp</dimen>
+    <dimen name="height_poster_progress">36dp</dimen>
+
 </resources>

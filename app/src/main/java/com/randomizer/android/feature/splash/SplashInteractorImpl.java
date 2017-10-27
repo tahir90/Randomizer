@@ -2,9 +2,7 @@ package com.randomizer.android.feature.splash;
 
 import android.content.Context;
 
-import com.randomizer.android.R;
 import com.randomizer.android.app.interactor.impl.BaseInteractorImpl;
-import com.randomizer.android.utils.NetworkUtils;
 import com.randomizer.android.utils.PreferencesUtils;
 
 import javax.inject.Inject;
@@ -23,12 +21,7 @@ public final class SplashInteractorImpl extends BaseInteractorImpl implements Sp
 
     @Override
     public boolean isNetworkConnected() {
-        return NetworkUtils.isNetAvailable(mContext);
-    }
-
-    @Override
-    public String getNoNetworkErrorText() {
-        return mContext.getString(R.string.error_no_network);
+        return super.isNetworkConnected(mContext);
     }
 
     @Override
