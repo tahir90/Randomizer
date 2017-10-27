@@ -10,6 +10,7 @@ import com.randomizer.android.R;
 import com.randomizer.android.app.injection.AppComponent;
 import com.randomizer.android.app.presenter.loader.PresenterFactory;
 import com.randomizer.android.app.view.impl.BaseActivity;
+import com.randomizer.android.feature.users.view.impl.UsersActivity;
 
 import javax.inject.Inject;
 
@@ -65,7 +66,8 @@ public final class SplashActivity extends BaseActivity<SplashPresenter, SplashVi
 
     @Override
     public void launchNextActivity() {
-       //ToDO: start next Activity
+        Intent intent = new Intent(this, UsersActivity.class);
+        startActivity(intent);
     }
 
 }

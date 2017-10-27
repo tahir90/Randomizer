@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.randomizer.android.app.RandomizerApp;
 import com.randomizer.android.utils.PreferencesUtils;
+import com.randomizer.android.utils.RandomUsersParser;
 
 import javax.inject.Singleton;
 
@@ -21,4 +22,5 @@ public interface AppComponent {
 
     PreferencesUtils exposePreferencesUtils();
 
+    RandomUsersParser exposeParser();
 }

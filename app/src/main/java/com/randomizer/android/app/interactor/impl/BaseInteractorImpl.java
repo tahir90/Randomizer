@@ -1,7 +1,10 @@
 package com.randomizer.android.app.interactor.impl;
 
 
+import android.content.Context;
+
 import com.randomizer.android.app.interactor.BaseInteractor;
+import com.randomizer.android.utils.NetworkUtils;
 
 import rx.Observable;
 import rx.Observer;
@@ -12,7 +15,7 @@ import rx.subscriptions.Subscriptions;
 import timber.log.Timber;
 
 
-public class BaseInteractorImpl implements BaseInteractor {
+public abstract class BaseInteractorImpl implements BaseInteractor {
 
     public Subscription mSubscription = Subscriptions.empty();
 
@@ -30,6 +33,10 @@ public class BaseInteractorImpl implements BaseInteractor {
             Timber.i("mSubscription.unSubscribe()");
             mSubscription.unsubscribe();
         }
+    }
+
+    protected boolean isNetworkConnected(Context context) {
+        return NetworkUtils.isNetAvailable(context);
     }
 
 }

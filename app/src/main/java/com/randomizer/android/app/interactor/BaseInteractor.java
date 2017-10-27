@@ -9,4 +9,5 @@ public interface BaseInteractor {
 
     void unsubscribe();
 
+    boolean isNetworkConnected();
 }
