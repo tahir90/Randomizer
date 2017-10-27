@@ -47,7 +47,10 @@ public final class UsersPresenterImpl extends BasePresenterImpl<UsersView> imple
         super.onPresenterDestroyed();
     }
 
-
+    /**
+     * Retuns status of loading
+     * @return mIsLoading
+     */
     @Override
     public boolean isLoading() {
         return mIsLoading;
@@ -96,6 +99,10 @@ public final class UsersPresenterImpl extends BasePresenterImpl<UsersView> imple
         mView.hideLoading();
     }
 
+    /**
+     * When the data has be loaded from API successfully
+     * @param list
+     */
     @Override
     public void onDataResponse(List<RandomUser> list) {
         assert mView != null;

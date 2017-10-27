@@ -10,6 +10,9 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
+/**
+ * Will be accessed throu DI
+ */
 @Singleton
 public class RandomUsersParser {
 
@@ -17,6 +20,11 @@ public class RandomUsersParser {
     public RandomUsersParser() {
     }
 
+    /**
+     * Maps result list into @RandomUser generalized list
+     * @param response
+     * @return
+     */
     public List<RandomUser> parseUsers(RandomUsersListResponse response) {
         List<RandomUser> list = new ArrayList<>();
 

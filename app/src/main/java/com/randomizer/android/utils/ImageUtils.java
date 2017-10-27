@@ -16,6 +16,13 @@ import timber.log.Timber;
 
 public class ImageUtils {
 
+    /**
+     * Utility funtion to load image
+     * @param context
+     * @param imageView
+     * @param progressBar
+     * @param url
+     */
     public static void loadImage(final Context context, final ImageView imageView, final ProgressBar progressBar, String url) {
 
         Timber.e("Path: " + url);

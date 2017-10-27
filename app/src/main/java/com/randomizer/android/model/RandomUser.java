@@ -1,5 +1,9 @@
 package com.randomizer.android.model;
 
+/**
+ * User data Object
+ * Not using any interface, as not required for transfer so far
+ */
 public class RandomUser {
 
     private String email;

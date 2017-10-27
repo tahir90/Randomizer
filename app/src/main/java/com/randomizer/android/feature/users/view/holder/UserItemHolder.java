@@ -38,6 +38,10 @@ public class UserItemHolder extends RecyclerView.ViewHolder implements View.OnCl
     private final Context mContext;
     private RandomUser mRandomUser;
 
+    /**
+     * Holder default constructor
+     * @param itemView
+     */
     public UserItemHolder(View itemView) {
         super(itemView);
         mContext = itemView.getContext();
@@ -46,12 +50,19 @@ public class UserItemHolder extends RecyclerView.ViewHolder implements View.OnCl
         itemView.setOnClickListener(this);
     }
 
+    /**
+     * Binds Data Object with the row Item
+     * @param randomUser
+     */
     public void bindData(RandomUser randomUser) {
         mRandomUser = randomUser;
 
         setValues();
     }
 
+    /**
+     * Setting values for the Ui widgets
+     */
     private void setValues() {
 
         mNameTextView.setText(AppUtils.getFormatedName(mRandomUser));
@@ -63,6 +74,10 @@ public class UserItemHolder extends RecyclerView.ViewHolder implements View.OnCl
         ImageUtils.loadImage(mContext, mLogoImageView, imageProgressBar,  mRandomUser.getImageUrl());
     }
 
+    /**
+     * Stub to provide click listener
+     * @param view
+     */
     @Override
     public void onClick(View view) {
         ((UsersActivity)view.getContext()).showToast("Clicked:" + AppUtils.getFormatedName(mRandomUser));

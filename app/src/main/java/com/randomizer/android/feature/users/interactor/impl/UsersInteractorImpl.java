@@ -35,6 +35,11 @@ public final class UsersInteractorImpl extends BaseInteractorImpl implements Use
         return super.isNetworkConnected(mContext);
     }
 
+    /**
+     * Fetches page from API
+     * @param pageNumber
+     * @param listener
+     */
     @Override
     public void fetchPage(int pageNumber, final OnFetchPageListener listener) {
         listener.onStart();

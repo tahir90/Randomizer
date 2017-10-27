@@ -59,6 +59,12 @@ public final class UsersActivity extends BaseActivity<UsersPresenter, UsersView>
         return R.layout.activity_users;
     }
 
+    /**
+     * Smart substitution of onCreate
+     * Life cycle will be handled by the Parent Activity
+     * @param savedInstanceState
+     * @param intent
+     */
     @Override
     protected void onViewReady(Bundle savedInstanceState, Intent intent) {
         super.onViewReady(savedInstanceState, intent);
