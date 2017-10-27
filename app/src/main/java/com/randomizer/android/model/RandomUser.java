@@ -26,6 +26,10 @@ public class RandomUser {
         this.address = address;
     }
 
+    public RandomUser() {
+        // for testing
+    }
+
     public String getEmail() {
         return email;
     }
