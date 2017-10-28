@@ -69,10 +69,6 @@ Used `Android Lint` for code quality checks
 
 - A small demonstration of Mokito is included to show, how we could test the app by JUnit
 
-#### Instrumentational Testing ####
-
-- A small demonstration of Esspresso testing is also provide
-
 ## Screenshots ##
 
 _to be provided later_
