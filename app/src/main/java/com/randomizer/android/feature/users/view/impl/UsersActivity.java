@@ -137,7 +137,7 @@ public final class UsersActivity extends BaseActivity<UsersPresenter, UsersView>
      */
     private void showList() {
         mAdapter.clearList();
-        mAdapter.addMovies(mList);
+        mAdapter.addList(mList);
         mAdapter.notifyDataSetChanged();
         mRecyclerView.setVisibility(View.VISIBLE);
     }

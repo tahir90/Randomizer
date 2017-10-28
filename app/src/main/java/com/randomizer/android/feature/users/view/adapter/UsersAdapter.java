@@ -44,7 +44,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UserItemHolder> {
         notifyDataSetChanged();
     }
 
-    public void addMovies(List<RandomUser> list) {
+    public void addList(List<RandomUser> list) {
         mList.addAll(list);
         notifyDataSetChanged();
     }

@@ -29,13 +29,13 @@ public final class UsersPresenterImpl extends BasePresenterImpl<UsersView> imple
 
         assert mView != null;
         if (mInteractor.isNetworkConnected()) {
-            laodFirstPage();
+            loadFirstPage();
         } else {
             mView.showNetworkError();
         }
     }
 
-    private void laodFirstPage() {
+    private void loadFirstPage() {
         fetchNextPage(AppConstants.FIRST_PAGE_NUMBER);
     }
 
